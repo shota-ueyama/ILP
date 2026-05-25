@@ -1,0 +1,48 @@
+Optimization Result Report
+==========================
+
+[Model Parameters]
+Grid Size: 4x4
+Max Load Limit: 50
+Module Loads: [10, 8, 6, 4, 2]
+Module Requirements: [1, 2, 3, 4, 5]
+Fixed States: 5
+Fixed Unit Duration: 1.0
+
+Objective Value: Feasible Solution Found
+
+[Performance Metrics]
+Execution Time (s): 0.0567
+MIP Gap: 0.0000%
+Nodes Explored: 1.0
+
+--- State 0 ---
+[M3(L 4)] [M3(L 4)] [M4(L 2)] [M4(L 2)] 
+[M3(L 4)] [M1(L 8)] [M4(L 2)] [ Empty ] 
+[M3(L 4)] [M1(L 8)] [M4(L 2)] [M4(L 2)] 
+[M0(L10)] [M2(L 6)] [M2(L 6)] [M2(L 6)] 
+
+--- State 1 ---
+[M3(L 4)] [M3(L 4)] [M4(L 2)] [M4(L 2)] 
+[M3(L 4)] [M1(L 8)] [M4(L 2)] [ Empty ] 
+[M3(L 4)] [M1(L 8)] [M4(L 2)] [M4(L 2)] 
+[M0(L10)] [M2(L 6)] [M2(L 6)] [M2(L 6)] 
+
+--- State 2 ---
+[M3(L 4)] [M3(L 4)] [M4(L 2)] [M4(L 2)] 
+[M3(L 4)] [M1(L 8)] [M4(L 2)] [ Empty ] 
+[M3(L 4)] [M1(L 8)] [M4(L 2)] [M4(L 2)] 
+[M0(L10)] [M2(L 6)] [M2(L 6)] [M2(L 6)] 
+
+--- State 3 ---
+[M3(L 4)] [M3(L 4)] [M4(L 2)] [M4(L 2)] 
+[M3(L 4)] [M1(L 8)] [M4(L 2)] [ Empty ] 
+[M3(L 4)] [M1(L 8)] [M4(L 2)] [M4(L 2)] 
+[M0(L10)] [M2(L 6)] [M2(L 6)] [M2(L 6)] 
+
+--- State 4 ---
+[M3(L 4)] [ Empty ] [M1(L 8)] [M4(L 2)] 
+[M3(L 4)] [M3(L 4)] [M1(L 8)] [M4(L 2)] 
+[M2(L 6)] [M3(L 4)] [M4(L 2)] [M4(L 2)] 
+[M2(L 6)] [M2(L 6)] [M0(L10)] [M4(L 2)] 
+

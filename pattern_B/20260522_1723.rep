@@ -1,0 +1,9 @@
+Optimization Result Report
+==========================
+
+[Model Parameters]
+Grid Size: 4x4
+Max Load Limit: 50
+Module Loads: [10, 8, 6, 4, 2]
+Module Requirements: [1, 2, 3, 4, 5]
+

@@ -1,0 +1,10 @@
+Optimization Result Report
+==========================
+
+[Model Parameters]
+Grid Size: 5x5
+Max Load Limit: 10
+Module Loads: [8, 7, 6, 5, 4]
+Module Requirements: [1, 2, 3, 4, 5]
+
+Objective Value (Total Duration): 2.0000

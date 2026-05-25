@@ -1,0 +1,16 @@
+Optimization Result Report
+==========================
+
+[Model Parameters]
+Grid Size: 4x4
+Max Load Limit: 50
+Module Loads: [10, 8, 6, 4, 2]
+Module Requirements: [1, 2, 3, 4, 5]
+
+Objective Value (Total Duration): 11.0000
+Duration: 3.0000
+[Performance Metrics]
+Execution Time (s): 219.0544
+MIP Gap: 0.0000%
+Nodes Explored: 216032.0
+
