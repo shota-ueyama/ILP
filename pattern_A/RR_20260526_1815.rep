@@ -1,0 +1,69 @@
+Optimization Result Report
+==========================
+
+[Model Parameters]
+Grid Size: 8x8
+Max Load Limit: 80
+Module Loads: [8, 7, 6, 5, 4, 13, 2, 9, 5, 9]
+Module Requirements: [1, 2, 3, 4, 5, 3, 4, 7, 8, 9]
+Fixed States: 5
+Fixed Unit Duration: 1.0
+Rectangular Ratio Limit: 0.80
+
+Objective Value: Feasible Solution Found
+
+[Performance Metrics]
+Execution Time (s): 13.8701
+MIP Gap: 0.0000%
+Nodes Explored: 7805.0
+
+--- State 0 ---
+[ Empty ] [ Empty ] [ Empty ] [M7(L 9)] [M7(L 9)] [M7(L 9)] [M7(L 9)] [M4(L 4)] 
+[ Empty ] [M9(L 9)] [M9(L 9)] [M7(L 9)] [M7(L 9)] [M7(L 9)] [M4(L 4)] [M4(L 4)] 
+[ Empty ] [M9(L 9)] [M9(L 9)] [M3(L 5)] [ Empty ] [ Empty ] [M4(L 4)] [M4(L 4)] 
+[M2(L 6)] [M9(L 9)] [M9(L 9)] [M3(L 5)] [ Empty ] [M8(L 5)] [M5(L13)] [ Empty ] 
+[M2(L 6)] [M9(L 9)] [M9(L 9)] [M3(L 5)] [M8(L 5)] [M8(L 5)] [M5(L13)] [ Empty ] 
+[M2(L 6)] [ Empty ] [M9(L 9)] [M3(L 5)] [M8(L 5)] [M8(L 5)] [M5(L13)] [ Empty ] 
+[M1(L 7)] [ Empty ] [ Empty ] [ Empty ] [M8(L 5)] [M8(L 5)] [M6(L 2)] [M6(L 2)] 
+[M1(L 7)] [M0(L 8)] [ Empty ] [ Empty ] [ Empty ] [M8(L 5)] [M6(L 2)] [M6(L 2)] 
+
+--- State 1 ---
+[M4(L 4)] [M4(L 4)] [M0(L 8)] [M8(L 5)] [M8(L 5)] [ Empty ] [M7(L 9)] [M7(L 9)] 
+[M4(L 4)] [ Empty ] [ Empty ] [M8(L 5)] [M8(L 5)] [M8(L 5)] [M7(L 9)] [M7(L 9)] 
+[M4(L 4)] [M4(L 4)] [ Empty ] [M8(L 5)] [M8(L 5)] [M8(L 5)] [M7(L 9)] [M7(L 9)] 
+[M6(L 2)] [ Empty ] [M3(L 5)] [M3(L 5)] [ Empty ] [M9(L 9)] [M9(L 9)] [M7(L 9)] 
+[M6(L 2)] [ Empty ] [M3(L 5)] [M3(L 5)] [ Empty ] [M9(L 9)] [ Empty ] [ Empty ] 
+[M6(L 2)] [ Empty ] [ Empty ] [ Empty ] [ Empty ] [M9(L 9)] [M9(L 9)] [M2(L 6)] 
+[M6(L 2)] [ Empty ] [ Empty ] [M1(L 7)] [ Empty ] [M9(L 9)] [M9(L 9)] [M2(L 6)] 
+[M5(L13)] [M5(L13)] [M5(L13)] [M1(L 7)] [ Empty ] [M9(L 9)] [M9(L 9)] [M2(L 6)] 
+
+--- State 2 ---
+[M4(L 4)] [M4(L 4)] [M0(L 8)] [M8(L 5)] [M8(L 5)] [ Empty ] [M7(L 9)] [M7(L 9)] 
+[M4(L 4)] [ Empty ] [ Empty ] [M8(L 5)] [M8(L 5)] [M8(L 5)] [M7(L 9)] [M7(L 9)] 
+[M4(L 4)] [M4(L 4)] [ Empty ] [M8(L 5)] [M8(L 5)] [M8(L 5)] [M7(L 9)] [M7(L 9)] 
+[M6(L 2)] [ Empty ] [M3(L 5)] [M3(L 5)] [ Empty ] [M9(L 9)] [M9(L 9)] [M7(L 9)] 
+[M6(L 2)] [ Empty ] [M3(L 5)] [M3(L 5)] [ Empty ] [M9(L 9)] [ Empty ] [ Empty ] 
+[M6(L 2)] [ Empty ] [ Empty ] [ Empty ] [ Empty ] [M9(L 9)] [M9(L 9)] [M2(L 6)] 
+[M6(L 2)] [ Empty ] [ Empty ] [M1(L 7)] [ Empty ] [M9(L 9)] [M9(L 9)] [M2(L 6)] 
+[M5(L13)] [M5(L13)] [M5(L13)] [M1(L 7)] [ Empty ] [M9(L 9)] [M9(L 9)] [M2(L 6)] 
+
+--- State 3 ---
+[M4(L 4)] [M4(L 4)] [M0(L 8)] [M8(L 5)] [M8(L 5)] [ Empty ] [M7(L 9)] [M7(L 9)] 
+[M4(L 4)] [ Empty ] [ Empty ] [M8(L 5)] [M8(L 5)] [M8(L 5)] [M7(L 9)] [M7(L 9)] 
+[M4(L 4)] [M4(L 4)] [ Empty ] [M8(L 5)] [M8(L 5)] [M8(L 5)] [M7(L 9)] [M7(L 9)] 
+[M6(L 2)] [ Empty ] [M3(L 5)] [M3(L 5)] [ Empty ] [M9(L 9)] [M9(L 9)] [M7(L 9)] 
+[M6(L 2)] [ Empty ] [M3(L 5)] [M3(L 5)] [ Empty ] [M9(L 9)] [ Empty ] [ Empty ] 
+[M6(L 2)] [ Empty ] [ Empty ] [ Empty ] [ Empty ] [M9(L 9)] [M9(L 9)] [M2(L 6)] 
+[M6(L 2)] [ Empty ] [ Empty ] [M1(L 7)] [ Empty ] [M9(L 9)] [M9(L 9)] [M2(L 6)] 
+[M5(L13)] [M5(L13)] [M5(L13)] [M1(L 7)] [ Empty ] [M9(L 9)] [M9(L 9)] [M2(L 6)] 
+
+--- State 4 ---
+[M4(L 4)] [M4(L 4)] [ Empty ] [ Empty ] [M6(L 2)] [M6(L 2)] [M6(L 2)] [M6(L 2)] 
+[M4(L 4)] [M5(L13)] [M5(L13)] [M5(L13)] [ Empty ] [ Empty ] [ Empty ] [M1(L 7)] 
+[M4(L 4)] [M4(L 4)] [ Empty ] [ Empty ] [ Empty ] [ Empty ] [ Empty ] [M1(L 7)] 
+[ Empty ] [M7(L 9)] [M7(L 9)] [M7(L 9)] [M7(L 9)] [M7(L 9)] [M7(L 9)] [M7(L 9)] 
+[ Empty ] [ Empty ] [ Empty ] [M8(L 5)] [M8(L 5)] [ Empty ] [M0(L 8)] [M3(L 5)] 
+[M9(L 9)] [M9(L 9)] [M9(L 9)] [M8(L 5)] [M8(L 5)] [M2(L 6)] [ Empty ] [M3(L 5)] 
+[M9(L 9)] [M9(L 9)] [M9(L 9)] [M8(L 5)] [M8(L 5)] [M2(L 6)] [ Empty ] [M3(L 5)] 
+[M9(L 9)] [M9(L 9)] [M9(L 9)] [M8(L 5)] [M8(L 5)] [M2(L 6)] [ Empty ] [M3(L 5)] 
+
