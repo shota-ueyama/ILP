@@ -3,10 +3,7 @@
 [Gurobi Optimizer](https://www.gurobi.com/)
 を使用
 
-```
-linux64
-```
-ディレクトリにおいて
+```linux64```ディレクトリにおいて
 
 ```text
 $ export GRB_LICENSE_FILE=$PWD/gurobi.lic
