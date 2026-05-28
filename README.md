@@ -8,9 +8,7 @@
 ```text
 $ export GRB_LICENSE_FILE=$PWD/gurobi.lic
 ```
-を実行
-
-pythonで実行
+を実行後、pythonで実行可能
 
 FPGAと回路モジュールに関する情報を入力することで、各状態におけるコンフィグレーションと合計稼働サイクル数を出力
 レポートファイルとして出力
