@@ -5,7 +5,7 @@
 
 ```linux64```ディレクトリにおいて
 
-$
+
 ```text
 export GRB_LICENSE_FILE=$PWD/gurobi.lic
 ```
