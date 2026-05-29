@@ -15,11 +15,11 @@ def solve_integrated_optimization_variable_duration():
     model.Params.OutputFlag = 1
 
 # 2. 定数・集合の定義
-    H, W = 4, 4                       # グリッドサイズ
+    H, W = 5, 5                       # グリッドサイズ
     MAX_LOAD_LIMIT = 15               # 各セルの最大累積負荷
 
     # モジュール設定
-    MODULE_LOADS = [8, 7, 6, 5, 4]
+    MODULE_LOADS = [10, 8, 6, 4, 2]
     MODULE_CELL_REQUIREMENTS = [1, 2, 3, 4, 5]
 
     # 継続時間の理論的最大値 (Big-Mとして使用)

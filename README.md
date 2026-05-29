@@ -5,8 +5,9 @@
 
 ```linux64```ディレクトリにおいて
 
+$
 ```text
-$ export GRB_LICENSE_FILE=$PWD/gurobi.lic
+export GRB_LICENSE_FILE=$PWD/gurobi.lic
 ```
 を実行後、pythonで実行可能
 

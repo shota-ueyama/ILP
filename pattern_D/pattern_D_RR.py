@@ -16,7 +16,7 @@ def solve_integrated_optimization_variable_duration():
 
     model.Params.NonConvex = 2
 # 2. 定数・集合の定義
-    H, W = 4, 4                       # グリッドサイズ
+    H, W = 5, 5                       # グリッドサイズ
     MAX_LOAD_LIMIT = 20               # 各セルの最大累積負荷
 
     # モジュール設定
@@ -29,7 +29,7 @@ def solve_integrated_optimization_variable_duration():
     # 探索対象となる最大コンフィギュレーション数（上限値）
     MAX_STATES_LIMIT = math.floor(MAX_LOAD_LIMIT / min(MODULE_LOADS)) + 1
 
-    RECT_RATIO_LIMIT = 1.0
+    RECT_RATIO_LIMIT = 0.8
 
     NUM_CELLS = H * W
     CELLS = range(NUM_CELLS)
