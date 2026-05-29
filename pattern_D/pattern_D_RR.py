@@ -17,7 +17,7 @@ def solve_integrated_optimization_variable_duration():
     model.Params.NonConvex = 2
 # 2. 定数・集合の定義
     H, W = 5, 5                       # グリッドサイズ
-    MAX_LOAD_LIMIT = 20               # 各セルの最大累積負荷
+    MAX_LOAD_LIMIT = 10             # 各セルの最大累積負荷
 
     # モジュール設定
     MODULE_LOADS = [10, 8, 6, 4, 2]
@@ -29,7 +29,7 @@ def solve_integrated_optimization_variable_duration():
     # 探索対象となる最大コンフィギュレーション数（上限値）
     MAX_STATES_LIMIT = math.floor(MAX_LOAD_LIMIT / min(MODULE_LOADS)) + 1
 
-    RECT_RATIO_LIMIT = 0.8
+    RECT_RATIO_LIMIT = 0.5
 
     NUM_CELLS = H * W
     CELLS = range(NUM_CELLS)
@@ -98,6 +98,14 @@ def solve_integrated_optimization_variable_duration():
             # (B) モジュール配置必要数制約
             model.addConstr(gp.quicksum(x[c, s, m] for c in CELLS) == Rm * z[s])
 
+            # --- 長方形幾何制約（2次等式挟み込みによる定式化） ---
+            model.addConstr(w_box[s, m] == c_max[s, m] - c_min[s, m] + 1)
+            model.addConstr(h_box[s, m] == r_max[s, m] - r_min[s, m] + 1)
+
+            # z[s]=1 のときのみ「幅 × 高さ == Rm」を強制（z[s]=0 のときは自動緩和）
+            model.addConstr(w_box[s, m] * h_box[s, m] <= Rm + (H * W) * (1 - z[s]))
+            model.addConstr(w_box[s, m] * h_box[s, m] >= Rm * z[s] + (1 - z[s]))
+
             # (C) 連結性制約
             #どこか1つのセルをRootとする
             model.addConstr(gp.quicksum(v[c, s, m] for c in CELLS) == z[s])
@@ -115,6 +123,14 @@ def solve_integrated_optimization_variable_duration():
                     out_flow - in_flow == (Rm - 1) * v[c, s, m] - (x[c, s, m] - v[c, s, m])
                 )
                 model.addConstr(out_flow <= (Rm - 1) * x[c, s, m])
+
+                # --- 包含制約 (Big-M法による座標の緊縛) ---
+                # x[c,s,m] = 1 のとき、セルの物理座標を外接矩形の境界内に縛る
+                row_idx, col_idx = divmod(c, W)
+                model.addConstr(row_idx >= r_min[s, m] - H * (1 - x[c, s, m]))
+                model.addConstr(row_idx <= r_max[s, m] + H * (1 - x[c, s, m]))
+                model.addConstr(col_idx >= c_min[s, m] - W * (1 - x[c, s, m]))
+                model.addConstr(col_idx <= c_max[s, m] + W * (1 - x[c, s, m]))
 
                 # (D) 総稼働時間に関する変数の線形化制約: y[c,s,m] = x[c,s,m] * d[s] のBig-M表現
                 model.addConstr(y[c, s, m] <= MAX_DURATION * x[c, s, m])
@@ -155,6 +171,7 @@ def solve_integrated_optimization_variable_duration():
             f.write(f"Max Load Limit: {MAX_LOAD_LIMIT}\n")
             f.write(f"Module Loads: {MODULE_LOADS}\n")
             f.write(f"Module Requirements: {MODULE_CELL_REQUIREMENTS}\n")
+            f.write(f"RECT_RATIO_LIMIT: {RECT_RATIO_LIMIT}\n")
             f.write("\n")
 
             # サマリー情報
@@ -191,7 +208,7 @@ def solve_integrated_optimization_variable_duration():
                     f.write(row_str + "\n")
                 f.write("\n")
 
-        print(f"\nレポートファイル '{filename}' を出力しました。")
+        print(f"\nless {filename}")
 
         active_states = sum(1 for s in STATES if z[s].X > 0.5)
         total_duration = model.ObjVal

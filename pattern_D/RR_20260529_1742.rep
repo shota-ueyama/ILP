@@ -1,0 +1,73 @@
+Optimization Result Report
+==========================
+
+[Model Parameters]
+Grid Size: 5x5
+Max Load Limit: 15
+Module Loads: [10, 8, 6, 4, 2]
+Module Requirements: [1, 2, 3, 4, 5]
+
+Objective Value (Total Duration): 5.0000
+Number of Active States: 8
+
+[Performance Metrics]
+Execution Time (s): 655.2014
+MIP Gap: 0.0000%
+Nodes Explored: 78997.0
+
+--- State 0 ---
+[M3(L 4)] [M3(L 4)] [M3(L 4)] [M4(L 2)] [M1(L 8)] 
+[M3(L 4)] [ Empty ] [M4(L 2)] [M4(L 2)] [M1(L 8)] 
+[ Empty ] [ Empty ] [ Empty ] [M4(L 2)] [M4(L 2)] 
+[ Empty ] [ Empty ] [M2(L 6)] [M2(L 6)] [M2(L 6)] 
+[ Empty ] [ Empty ] [ Empty ] [M0(L10)] [ Empty ] 
+
+--- State 1 ---
+[M4(L 2)] [ Empty ] [M4(L 2)] [M2(L 6)] [ Empty ] 
+[M4(L 2)] [M4(L 2)] [M4(L 2)] [M2(L 6)] [ Empty ] 
+[ Empty ] [M3(L 4)] [ Empty ] [M2(L 6)] [M1(L 8)] 
+[ Empty ] [M3(L 4)] [ Empty ] [ Empty ] [M1(L 8)] 
+[M3(L 4)] [M3(L 4)] [M0(L10)] [ Empty ] [ Empty ] 
+
+--- State 2 ---
+[ Empty ] [ Empty ] [M2(L 6)] [M2(L 6)] [M3(L 4)] 
+[ Empty ] [ Empty ] [M2(L 6)] [M3(L 4)] [M3(L 4)] 
+[M4(L 2)] [M1(L 8)] [M1(L 8)] [ Empty ] [M3(L 4)] 
+[M4(L 2)] [M4(L 2)] [M4(L 2)] [M4(L 2)] [ Empty ] 
+[ Empty ] [ Empty ] [ Empty ] [ Empty ] [M0(L10)] 
+
+--- State 3 ---
+[ Empty ] [ Empty ] [M3(L 4)] [ Empty ] [ Empty ] 
+[M3(L 4)] [M3(L 4)] [M3(L 4)] [ Empty ] [M4(L 2)] 
+[ Empty ] [M4(L 2)] [M4(L 2)] [M4(L 2)] [M4(L 2)] 
+[M2(L 6)] [M2(L 6)] [ Empty ] [ Empty ] [ Empty ] 
+[M0(L10)] [M2(L 6)] [ Empty ] [M1(L 8)] [M1(L 8)] 
+
+--- State 4 ---
+[ Empty ] [ Empty ] [ Empty ] [ Empty ] [ Empty ] 
+[M4(L 2)] [M4(L 2)] [M4(L 2)] [M4(L 2)] [M4(L 2)] 
+[M1(L 8)] [M1(L 8)] [M3(L 4)] [M3(L 4)] [M3(L 4)] 
+[ Empty ] [M0(L10)] [M2(L 6)] [M3(L 4)] [ Empty ] 
+[ Empty ] [M2(L 6)] [M2(L 6)] [ Empty ] [ Empty ] 
+
+--- State 5 ---
+[ Empty ] [ Empty ] [M4(L 2)] [ Empty ] [M4(L 2)] 
+[ Empty ] [M0(L10)] [M4(L 2)] [M4(L 2)] [M4(L 2)] 
+[M1(L 8)] [ Empty ] [ Empty ] [ Empty ] [ Empty ] 
+[M1(L 8)] [M2(L 6)] [M3(L 4)] [ Empty ] [ Empty ] 
+[M2(L 6)] [M2(L 6)] [M3(L 4)] [M3(L 4)] [M3(L 4)] 
+
+--- State 6 ---
+[ Empty ] [M1(L 8)] [M2(L 6)] [M2(L 6)] [ Empty ] 
+[M3(L 4)] [M1(L 8)] [M2(L 6)] [ Empty ] [ Empty ] 
+[M3(L 4)] [M3(L 4)] [ Empty ] [ Empty ] [M4(L 2)] 
+[M3(L 4)] [ Empty ] [ Empty ] [ Empty ] [M4(L 2)] 
+[M0(L10)] [ Empty ] [M4(L 2)] [M4(L 2)] [M4(L 2)] 
+
+--- State 7 ---
+[M1(L 8)] [M0(L10)] [ Empty ] [ Empty ] [ Empty ] 
+[M1(L 8)] [M4(L 2)] [M4(L 2)] [ Empty ] [ Empty ] 
+[M3(L 4)] [M4(L 2)] [M2(L 6)] [M2(L 6)] [ Empty ] 
+[M3(L 4)] [M4(L 2)] [M4(L 2)] [M2(L 6)] [ Empty ] 
+[M3(L 4)] [M3(L 4)] [ Empty ] [ Empty ] [ Empty ] 
+
