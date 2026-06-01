@@ -16,7 +16,7 @@ def solve_integrated_optimization_variable_duration():
 
 # 2. 定数・集合の定義
     H, W = 5, 5                       # グリッドサイズ
-    MAX_LOAD_LIMIT = 15               # 各セルの最大累積負荷
+    MAX_LOAD_LIMIT = 20               # 各セルの最大累積負荷
 
     # モジュール設定
     MODULE_LOADS = [10, 8, 6, 4, 2]
@@ -76,6 +76,8 @@ def solve_integrated_optimization_variable_duration():
         # (A) コンフィギュレーションの順序性および継続時間制約
         if s > 0:
             model.addConstr(z[s] <= z[s-1], name=f"order_state_{s}")
+
+            model.addConstr(d[s] <= d[s-1], name=f"symmetry_duration_{s}")
 
         # 状態sが有効な場合のみ継続時間が割り当てられる
         model.addConstr(d[s] <= MAX_DURATION * z[s])
